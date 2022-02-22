@@ -1,23 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.sass';
+import {Button} from "./components/ui/Button";
+import {ButtonWithIcon} from "./components/ui/ButtonWithIcon";
+import {LinkWithIconOnly} from "./components/ui/LinkWithIconOnly";
+import {LinkWithIcon} from "./components/ui/LinkWithIcon";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={styles.App}>
+      <header className={styles.AppHeader}>
+        <Button onClick={()=>{}}>Условия сервиса</Button>
+        <ButtonWithIcon iconName='arrowLeft' />
+        <ButtonWithIcon iconName='arrowRight' />
+        <LinkWithIconOnly iconName='arrowLink' />
+        <LinkWithIcon text="Казань" iconName='location' />
+        <LinkWithIcon text='info@ecorus.ru' iconName='mail' isFooter={true}/>
+        <LinkWithIcon text='+7 (800) 880-88-88' iconName='phone' isFooter={true}/>
       </header>
     </div>
   );
