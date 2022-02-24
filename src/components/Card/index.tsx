@@ -10,8 +10,8 @@ export const Card: FC<ICard> = ({
     return (
         <article className={styles.card}>
             <div className={styles.content}>
-                <h2>{title}</h2>
-                <p>{paragraph}</p>
+                <h2 className={styles.title}>{title}</h2>
+                <p className={styles.paragraph}>{paragraph}</p>
                 <LinkWithIconOnly iconName='arrowLink' to={to} />
             </div>
             <Icon name={imageName} height={imageHeight} width={imageWidth} />

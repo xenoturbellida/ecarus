@@ -5,14 +5,9 @@ import galleryPhoto1 from "../../photos/galleryPhoto1.jpg";
 import galleryPhoto2 from "../../photos/galleryPhoto2.jpg";
 import galleryPhoto3 from "../../photos/galleryPhoto3.jpg";
 import {Button} from "../ui/Button";
+import {IGalleryItem} from "./index.interfaces";
 
-export interface IGalleryItem {
-    title: string;
-    paragraph: string;
-    buttonTitle: string;
-    onClick: () => void;
-    itemNo: 1 | 2 | 3;
-}
+
 const cx = classNames.bind(styles);
 
 export const GalleryItem: FC<IGalleryItem>= ({
@@ -30,7 +25,6 @@ export const GalleryItem: FC<IGalleryItem>= ({
         case 3:
             photo = galleryPhoto3;
     }
-    console.log(photo);
 
     return (
         <div className={cx({
@@ -40,8 +34,8 @@ export const GalleryItem: FC<IGalleryItem>= ({
             'item3': itemNo === 3,
         })}>
             <div className={styles.content}>
-                <h1>{title}</h1>
-                <p>{paragraph}</p>
+                <h1 className={styles.title}>{title}</h1>
+                <p className={styles.paragraph}>{paragraph}</p>
                 <Button onClick={onClick}>{buttonTitle}</Button>
             </div>
             <img src={photo} className={styles.photo} alt='photo' />
