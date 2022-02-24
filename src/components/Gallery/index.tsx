@@ -30,7 +30,7 @@ export const Gallery = () => {
 
     return (
         <article className={styles.galleryWrapper}>
-            <Swiper id='main'>
+            <Swiper id='main' loop>
                 <div className={cx({
                     buttonWrapper: true,
                     buttonLeft: true

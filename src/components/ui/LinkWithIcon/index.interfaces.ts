@@ -4,5 +4,5 @@ export interface ILinkWithIcon {
     iconHeight?: number | string;
     iconWidth?: number | string;
     isFooter?: boolean;
-    // to: 'string';
+    hasGradient?: boolean;
 }

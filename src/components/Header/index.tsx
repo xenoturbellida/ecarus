@@ -1,9 +1,9 @@
 import React, {FC} from "react";
 import styles from "./index.module.sass";
 import {Link} from "../ui/Link";
-import {Icon} from "../ui/Icon";
 import {LinkWithIcon} from "../ui/LinkWithIcon";
 import {IHeader} from "./index.interfaces";
+import logo from '../../svgIcons/logo.svg';
 
 
 export const Header: FC<IHeader> = () => {
@@ -12,7 +12,7 @@ export const Header: FC<IHeader> = () => {
             <div className={styles.wrapper}>
                 <div className={styles.container}>
                     <div className={styles.headerLeft}>
-                        <Icon name='logo' height='18' width='94' />
+                        <img src={logo} alt='Логотип' />
                         <nav>
                             <ul className={styles.menu}>
                                 <li>
@@ -36,8 +36,8 @@ export const Header: FC<IHeader> = () => {
                     </div>
                     <div className={styles.headerRight}>
                         <LinkWithIcon text={'Казань'} iconName='location' />
-                        <LinkWithIcon text={'1000'} iconName='currency' />
-                        <LinkWithIcon text={'Алексей'} iconName='avatar' />
+                        <LinkWithIcon text={'1000'} iconName='currency' hasGradient/>
+                        <LinkWithIcon text={'Алексей'} iconName='avatar' hasGradient/>
                     </div>
                 </div>
 
