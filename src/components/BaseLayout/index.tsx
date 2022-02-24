@@ -12,8 +12,8 @@ export const BaseLayout: FC<IBaseLayout> = ({children}) => {
             <header className={styles.header}>
                 <Header />
             </header>
-            <div className={styles.sidebar}>Sidebar</div>
-            <div className={styles.sidebar2}>Sidebar 2</div>
+            <div className={styles.sidebar}></div>
+            <div className={styles.sidebar2}></div>
             <main className={styles.content}>
                 {children}
             </main>
