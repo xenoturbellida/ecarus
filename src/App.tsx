@@ -1,24 +1,37 @@
 import React from 'react';
 import styles from './App.module.sass';
-import {Button} from "./components/ui/Button";
-import {ButtonWithIcon} from "./components/ui/ButtonWithIcon";
-import {LinkWithIconOnly} from "./components/ui/LinkWithIconOnly";
-import {LinkWithIcon} from "./components/ui/LinkWithIcon";
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+// import SwiperCore, {Navigation, Pagination} from "swiper";
 
+import 'swiper/css';
+import {MainPage} from "./pages/MainPage";
+import {Header} from "./components/Header";
+import {Footer} from "./components/Footer";
+import {BaseLayout} from "./components/BaseLayout";
+// import 'swiper/css/navigation';
+
+
+// SwiperCore.use([Navigation]);
+
+export const SliderNextButton = () => {
+    const swiper = useSwiper();
+    return (
+        <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
+    )
+}
+
+export const SliderPrevButton = () => {
+    const swiper = useSwiper();
+    return (
+        <button onClick={() => swiper.slidePrev()}>Slide to the prev slide</button>
+    )
+}
 
 function App() {
   return (
-    <div className={styles.App}>
-      <header className={styles.AppHeader}>
-        <Button onClick={()=>{}}>Условия сервиса</Button>
-        <ButtonWithIcon iconName='arrowLeft' />
-        <ButtonWithIcon iconName='arrowRight' />
-        <LinkWithIconOnly iconName='arrowLink' />
-        <LinkWithIcon text="Казань" iconName='location' />
-        <LinkWithIcon text='info@ecorus.ru' iconName='mail' isFooter={true}/>
-        <LinkWithIcon text='+7 (800) 880-88-88' iconName='phone' isFooter={true}/>
-      </header>
-    </div>
+    <BaseLayout>
+
+    </BaseLayout>
   );
 }
 
