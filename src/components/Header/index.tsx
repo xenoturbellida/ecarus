@@ -3,18 +3,10 @@ import styles from "./index.module.sass";
 import {Link} from "../ui/Link";
 import {Icon} from "../ui/Icon";
 import {LinkWithIcon} from "../ui/LinkWithIcon";
+import {IHeader} from "./index.interfaces";
 
-
-export interface IHeader {
-    location?: string;
-    balance?: number;
-    userPhoto?: number;
-    userName?: string;
-}
 
 export const Header: FC<IHeader> = () => {
-
-
     return (
         <>
             <div className={styles.wrapper}>
