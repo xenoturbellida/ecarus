@@ -29,22 +29,24 @@ export const Gallery = () => {
     }
 
     return (
-        <Swiper id='main'>
-            <div className={cx({
-                buttonWrapper: true,
-                buttonLeft: true
-            })}>
-                <SliderPrevButton />
-            </div>
+        <article className={styles.galleryWrapper}>
+            <Swiper id='main'>
+                <div className={cx({
+                    buttonWrapper: true,
+                    buttonLeft: true
+                })}>
+                    <SliderPrevButton />
+                </div>
 
-            {slides}
+                {slides}
 
-            <div className={cx({
-                buttonWrapper: true,
-                buttonRight: true
-            })}>
-                <SliderNextButton />
-            </div>
-        </Swiper>
+                <div className={cx({
+                    buttonWrapper: true,
+                    buttonRight: true
+                })}>
+                    <SliderNextButton />
+                </div>
+            </Swiper>
+        </article>
     );
 }
