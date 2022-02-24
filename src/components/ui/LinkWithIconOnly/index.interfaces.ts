@@ -1,4 +1,6 @@
 export interface ILinkWithIconOnly {
     iconName: string;
-    iconSize?: number | string;
+    iconHeight?: number | string;
+    iconWidth?: number | string;
+    to: string;
 }

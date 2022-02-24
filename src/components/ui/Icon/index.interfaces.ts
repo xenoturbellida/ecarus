@@ -1,4 +1,5 @@
 export interface IIcon {
     name: string;
-    size?: number | string;
+    height?: number | string;
+    width?: number | string;
 }

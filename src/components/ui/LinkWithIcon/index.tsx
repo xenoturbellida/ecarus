@@ -8,12 +8,12 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 export const LinkWithIcon: FC<ILinkWithIcon> =
-    ({text, iconName, iconSize=24, isFooter=false}) => {
+    ({text, iconName, iconHeight=24, iconWidth=24, isFooter=false}) => {
     return (
         <a className={cx({linkWithIcon: true, footerLink: isFooter})}
            href={'#'}
         >
-            <Icon name={iconName} size={iconSize}/>
+            <Icon name={iconName} width={iconWidth} height={iconHeight}/>
             {text}
         </a>
     )
