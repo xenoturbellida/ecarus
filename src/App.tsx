@@ -29,9 +29,7 @@ export const SliderPrevButton = () => {
 
 function App() {
   return (
-    <BaseLayout>
-
-    </BaseLayout>
+    <MainPage />
   );
 }
 

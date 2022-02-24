@@ -1,4 +1,4 @@
 export interface IButton {
-    onClick: (event: { preventDefault: () => void;}) => void,
-    mode?: 'primary' | 'secondary'
+    onClick: () => void;
+    mode?: 'primary' | 'secondary';
 }

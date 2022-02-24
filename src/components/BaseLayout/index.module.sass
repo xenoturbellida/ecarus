@@ -11,15 +11,18 @@
 
 .content
   grid-area: content
+  background-color: white
 
 .header
   grid-area: header
+  background-color: lightgoldenrodyellow
 
 .footer
   grid-area: footer
+  background-color: lightpink
 
 .wrapper
-  background-color: #fff
+  background-color: lightgray
   color: #444
 
 .wrapper
@@ -27,18 +30,8 @@
   display: grid
 
 .wrapper
-
-  grid-gap: 20px
-  /*grid-template-columns: 120px auto 120px;*/
   grid-template-columns: 1fr 1200px 1fr
-  grid-template-rows: auto 1fr auto
+  //grid-template-rows: auto 1fr auto
+  grid-template-rows: 80px 1fr 64px
   grid-template-areas: "header  header  header" "sidebar content sidebar2" "footer  footer  footer"
 
-.header,
-.footer
-  background-color: #999
-
-
-.sidebar2
-  background-color: #ccc
-  color: #444
